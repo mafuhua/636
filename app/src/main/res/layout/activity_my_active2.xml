@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_blue_light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="活动列表"
+            android:textColor="#ffffff"
+            android:textSize="35sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sec_title"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_pushed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="已发布"
+                android:textColor="#000000" />
+
+            <View
+                android:id="@+id/line_left"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_blue_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_check"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="待审核"
+                android:textColor="#000000" />
+
+            <View
+                android:id="@+id/line_right"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_blue_light"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+<!--
+    <ListView
+        android:id="@+id/lv_active"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />-->
+    <com.yuen636.pager.MyViewPager
+        android:id="@+id/vp_myViewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+    </com.yuen636.pager.MyViewPager>
+</LinearLayout>
